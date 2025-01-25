@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    font-family: "Courier New", 
+    courier; 
+    color: rgb(118, 96, 109); 
+    background-color: #42353d;
+}
+
+header{
+    margin-top: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color: pink;
+    border-bottom: 3px solid pink
+}
+
+@media(max-width:995px){
+    nav{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid pink;
+        border-bottom: 3px solid;
+        border-bottom-left-radius: 2rem;
+        background-color: #6B5863;
+        border-top: 0.1rem solid #42353d;
+
+
+    }
+    nav.active{
+        display: block;
+
+    }
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        
+    }
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid pink
+    }
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}        
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: #42353d;
+} 
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color:#6B5863;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: pink;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid pink;
+    transition: 0.3s ease;
+    cursor: pointer;
+
+}
+
+.btn:hover{
+    transform: scale3d(1.03);
+    background-color: pink;
+    color: #6B5863;
+    box-shadow: 0 0 25px pink;
+}
+
+.cool_thing{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.cool_thing span{
+    position: relative;
+}
+
+.cool_thing span::before{
+    content: "psychology";
+    color: pink;
+    animation: words 20s infinite;
+}
+
+.cool_thing span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid;
+    }
+}
+
+@keyframes words{
+    0%, 20%{
+        content: " psychology"
+    }
+        21%, 40%{
+            content:" philosophy"
+        }
+        41%, 42%{
+            content:" GYATS"
+        }
+        43%, 60%{
+            content:" linguistics"
+        }
+        61%, 80%{
+            content:" computer science"
+        }
+        81%, 98%{
+            content: " people :>";
+        }
+        99%,100%{
+            content: " THE THUZZ"  /* thicc huzz */
+        }
+
+    
+}
